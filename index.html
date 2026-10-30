@@ -34,8 +34,8 @@ function draw() {
   ctx.fillStyle="#111";
   ctx.fillRect(0,0,400,400);
 
-  ctx.fillStyle="red";
-  ctx.fillRect(food.x,food.y,20,20);
+  ctx.font = "18px Arial";
+ctx.fillText("🍎", food.x, food.y + 18);
 
   let head = {x:snake[0].x+dx,y:snake[0].y+dy};
 
@@ -52,7 +52,7 @@ function draw() {
 
   snake.unshift(head);
 
-  ctx.fillStyle="lime";
+ctx.fillStyle="lime";
   snake.forEach(part=>{
     ctx.fillRect(part.x,part.y,20,20);
   });
